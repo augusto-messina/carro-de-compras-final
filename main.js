@@ -164,14 +164,15 @@ function terminarCompra (){
             if (result.isConfirmed) {
               arrayCompras = []
               localStorage.removeItem('carrito')
+              swalWithBootstrapButtons.fire('✅Compra confirmada✅',
+                'Gracias por comprar en tri-shop :)'
+              )
               actualizarCarrito()
-              window.location.reload()
             }else if (
-              /* Read more about handling dismissals below */
               result.dismiss === Swal.DismissReason.cancel
             ) {
               swalWithBootstrapButtons.fire(
-                'Compra cancelada',
+                '❌Compra cancelada❌',
                 'Sigue viendo nuestros productos :)',
                 
               )
