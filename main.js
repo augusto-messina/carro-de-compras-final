@@ -7,7 +7,6 @@ const contadorCarrito = document.getElementById(`contadorCarrito`)
 const precioTotal = document.getElementById(`precioTotal`)
 const btnComprar = document.getElementById("btnComprar")
 
-
 let arrayCompras = []
 
 let listaProductos;
@@ -54,9 +53,6 @@ function muestraProductos(array){
       })
     }));
 }
-
-
-
 
 function sumarCarrito(id){
     let agregado = arrayCompras.find(e=>e.id == id) 
@@ -139,7 +135,11 @@ function recuperarLS (){
 }
 
 
-
+function finalizarCompra() {
+    // Lógica para finalizar la compra, por ejemplo:
+    guardarDatosDeCompra();
+    window.location.reload()
+}
 
 terminarCompra()
 function terminarCompra (){
@@ -164,10 +164,12 @@ function terminarCompra (){
             if (result.isConfirmed) {
               arrayCompras = []
               localStorage.removeItem('carrito')
-              swalWithBootstrapButtons.fire('✅Compra confirmada✅',
-                'Gracias por comprar en tri-shop :)'
-              )
               actualizarCarrito()
+                swalWithBootstrapButtons.fire('✅Compra confirmada✅',
+                  'Gracias por comprar en tri-shop :)',
+                ).then((result) => {
+                  window.location.reload()
+                })
             }else if (
               result.dismiss === Swal.DismissReason.cancel
             ) {
@@ -179,9 +181,5 @@ function terminarCompra (){
             }
           })
     })
-
 }
-
-
-
 
