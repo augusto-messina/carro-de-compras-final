@@ -19,16 +19,16 @@
   position: relative;
 }
 
-.pie-pag{
-  position: relative;
-  top: 1.5625rem;
-  margin-right: .3125rem;
-  display: inline-block;
-  }
-  .color{
-      color: #fff !important;
-      text-align: center; 
-  }
+
+.titulo-zapatillas{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 4.375rem;
+  font-size: 30px;
+  color:#B31312;
+  font-family: 'Nike', sans-serif;
+}
 
   .cuotas{
     color:green;
@@ -44,6 +44,17 @@
 
 
 .hidden {display:none}
+
+.pie-pag{
+  position: relative;
+  top: 1.5625rem;
+  margin-right: .3125rem;
+  display: inline-block;
+  }
+  .color{
+      color: #fff !important;
+      text-align: center; 
+  }
 
 .footer {
   display: flex;
