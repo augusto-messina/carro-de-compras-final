@@ -20,16 +20,6 @@
 }
 
 
-.titulo-zapatillas{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 4.375rem;
-  font-size: 30px;
-  color:#B31312;
-  font-family: 'Nike', sans-serif;
-}
-
   .cuotas{
     color:green;
 }
