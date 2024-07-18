@@ -1,5 +1,5 @@
 
-/* CARDS****************************************** */
+
 
 .content-logo{
   width: 60px;
@@ -42,10 +42,8 @@
   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
-/* OCULTAR BOTON COMPRA */
-.hidden {display:none}
 
-/* FOOTER************************************************* */
+.hidden {display:none}
 
 .footer {
   display: flex;

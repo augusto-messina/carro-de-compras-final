@@ -136,7 +136,6 @@ function recuperarLS (){
 
 
 function finalizarCompra() {
-    // Lógica para finalizar la compra, por ejemplo:
     guardarDatosDeCompra();
     window.location.reload()
 }
